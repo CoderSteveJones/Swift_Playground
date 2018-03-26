@@ -122,6 +122,53 @@ if let add = p.room?.address {
 }
 */
 
+/*
+// 错误处理
+// 操作错误处理枚举
+enum OperationError: Error {
+    case ErrorOne
+    case ErrorTwo(String) // 带关联值的枚举属性
+    case ErrorOthers
+}
+
+func throwDriver(num: Int) throws {
+    if num == 1 {
+        throw OperationError.ErrorOne
+    }else if num == 2 {
+        throw OperationError.ErrorTwo("数据类型错误")
+    }else if num == 3 {
+        throw OperationError.ErrorOthers
+    }
+}
+
+do {
+    print("使用do-catch捕获错误")
+    try throwDriver(num: 2) // 使用try尝试请求
+    print("未捕获到错误")
+} catch OperationError.ErrorOne { // catch去捕捉是否又throw出来的错误
+    print("捕捉到错误：ErrorOne")
+} catch OperationError.ErrorTwo(let message) { // 可以使用let 获取枚举关联值
+    print("捕捉到错误：ErrorTwo" + message)
+} catch OperationError.ErrorOthers {
+    print("捕捉到错误：ErrorOthers")
+}
+*/
+
+/*
+// map
+let nums = [1, 2, 3]
+let sumNums = nums.map {
+    return ($0 + 1)
+}
+print(sumNums)
+*/
+
+
+// 切片
+
+
+
+
 
 
 
